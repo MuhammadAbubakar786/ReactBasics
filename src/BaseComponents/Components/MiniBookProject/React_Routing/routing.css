@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 5px 50px 5px 10px;
+}
+.container li {
+  list-style: none;
+  margin: 15px;
+  color: brown;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.container li a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.container li a:hover {
+  color: white;
+}
+.container li a:focus {
+  color: gray;
+}
+.logo {
+  justify-content: flex-start;
+}

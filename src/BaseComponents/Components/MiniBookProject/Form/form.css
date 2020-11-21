@@ -1,0 +1,8 @@
+.conatiner {
+  display: flex;
+  width: 800px;
+  background-color: gray;
+  margin: 50px auto;
+  border: 1px solid black;
+  justify-content: space-around;
+}

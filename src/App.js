@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Form from './BaseComponents/Components/MiniBookProject/Form/Form';
+import MiniBook from './BaseComponents/Components/MiniBookProject/MiniBook';
+import Routing from './BaseComponents/Components/MiniBookProject/React_Routing/Routing';
+import About from './BaseComponents/Components/MiniBookProject/About'
+import Contact from './BaseComponents/Components/MiniBookProject/Contact'
+import Home from './BaseComponents/Components/MiniBookProject/Home'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import StudentTimeTable from './BaseComponents/Components/MiniBookProject/StudentTimeTable/StudentTimeTable';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routing />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/jobs' component={StudentTimeTable} />
+      </Switch>
+    </Router>
   );
 }
 
