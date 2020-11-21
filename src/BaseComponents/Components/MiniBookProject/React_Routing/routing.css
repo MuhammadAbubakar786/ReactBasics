@@ -26,6 +26,3 @@
 .container li a:focus {
   color: gray;
 }
-.logo {
-  justify-content: flex-start;
-}
