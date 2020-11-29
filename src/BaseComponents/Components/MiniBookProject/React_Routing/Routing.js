@@ -26,7 +26,7 @@ function Routing() {
                             <Link to="/portfolio">Portfolio</Link>
                         </li>
                         <li>
-                            <Link to="/jobs">jobs</Link>
+                            <Link to="/Counter">Counter App</Link>
                         </li>
 
                     </ul>
