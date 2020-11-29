@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CounterContext from './CounterContext'
+import Button from './Button'
+import counterReducer from './counterReducer'
+import Counter2 from './Counter2'
 
 function Counter() {
-    const [count, setcount] = React.useState(0);
+    const context = useContext(CounterContext)
     return (
-        <div>
-            <h1 style={{ margin: "50px auto" }}>You Clicked  me {count}</h1>
-            <button onClick={() => { setcount(count + 1) }}>Click me</button>
-        </div>
+        <>
+            <h1>Counter :: {context}</h1>
+            <Button />
+            <Counter2 />
+        </>
     )
 }
 export default Counter

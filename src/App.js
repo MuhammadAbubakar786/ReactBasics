@@ -12,17 +12,22 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import CounterContext from './BaseComponents/Components/CounterContext'
 function App() {
+  const CounterValue = React.useState(0)
   return (
-    <Router>
-      <Routing />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/Counter' component={Counter} />
-      </Switch>
-    </Router>
+    // <Router>
+    //   <Routing />
+    //   <Switch>
+    //     <Route exact path='/' component={Home} />
+    //     <Route path='/about' component={About} />
+    //     <Route path='/contact' component={Contact} />
+    //     <Route path='/Counter' component={Counter} />
+    //   </Switch>
+    // </Router>
+    <CounterContext.Provider value={CounterValue}>
+      <Counter />
+    </CounterContext.Provider>
   );
 }
 
